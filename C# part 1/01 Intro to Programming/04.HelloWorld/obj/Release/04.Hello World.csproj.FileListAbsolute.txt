@@ -1,5 +1,0 @@
-D:\todor\work\Telerik\C#\01 IntroToProgramming\IntroToProgramming\04.HelloWorld\bin\Release\04.HelloWorld.exe.config
-D:\todor\work\Telerik\C#\01 IntroToProgramming\IntroToProgramming\04.HelloWorld\bin\Release\04.HelloWorld.exe
-D:\todor\work\Telerik\C#\01 IntroToProgramming\IntroToProgramming\04.HelloWorld\bin\Release\04.HelloWorld.pdb
-D:\todor\work\Telerik\C#\01 IntroToProgramming\IntroToProgramming\04.HelloWorld\obj\Release\04.HelloWorld.exe
-D:\todor\work\Telerik\C#\01 IntroToProgramming\IntroToProgramming\04.HelloWorld\obj\Release\04.HelloWorld.pdb
