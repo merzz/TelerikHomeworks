@@ -1,0 +1,8 @@
+D:\todor\work\Telerik\C#\01 IntroToProgramming\IntroToProgramming\10 Horrible Code\bin\Debug\04.HelloWorld.exe.config
+D:\todor\work\Telerik\C#\01 IntroToProgramming\IntroToProgramming\10 Horrible Code\bin\Debug\04.HelloWorld.exe
+D:\todor\work\Telerik\C#\01 IntroToProgramming\IntroToProgramming\10 Horrible Code\bin\Debug\04.HelloWorld.pdb
+D:\todor\work\Telerik\C#\01 IntroToProgramming\IntroToProgramming\10 Horrible Code\obj\Debug\04.HelloWorld.exe
+D:\todor\work\Telerik\C#\01 IntroToProgramming\IntroToProgramming\10 Horrible Code\obj\Debug\04.HelloWorld.pdb
+D:\todor\work\Telerik\C#\01 IntroToProgramming\10.Horrible Code\bin\Debug\04.HelloWorld.exe.config
+D:\todor\work\Telerik\C#\01 IntroToProgramming\10.Horrible Code\obj\Debug\04.HelloWorld.exe
+D:\todor\work\Telerik\C#\01 IntroToProgramming\10.Horrible Code\obj\Debug\04.HelloWorld.pdb

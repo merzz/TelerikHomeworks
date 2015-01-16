@@ -1,0 +1,12 @@
+D:\todor\work\Telerik\C#\01 IntroToProgramming\IntroToProgramming\16.PrintLongSequence\bin\Debug\04.HelloWorld.exe.config
+D:\todor\work\Telerik\C#\01 IntroToProgramming\IntroToProgramming\16.PrintLongSequence\bin\Debug\04.HelloWorld.exe
+D:\todor\work\Telerik\C#\01 IntroToProgramming\IntroToProgramming\16.PrintLongSequence\bin\Debug\04.HelloWorld.pdb
+D:\todor\work\Telerik\C#\01 IntroToProgramming\IntroToProgramming\16.PrintLongSequence\obj\Debug\16.PrintLongSequence.csprojResolveAssemblyReference.cache
+D:\todor\work\Telerik\C#\01 IntroToProgramming\IntroToProgramming\16.PrintLongSequence\obj\Debug\04.HelloWorld.exe
+D:\todor\work\Telerik\C#\01 IntroToProgramming\IntroToProgramming\16.PrintLongSequence\obj\Debug\04.HelloWorld.pdb
+D:\todor\work\Telerik\C#\01 IntroToProgramming\16.PrintLongSequence\bin\Debug\04.HelloWorld.exe.config
+D:\todor\work\Telerik\C#\01 IntroToProgramming\16.PrintLongSequence\obj\Debug\04.HelloWorld.exe
+D:\todor\work\Telerik\C#\01 IntroToProgramming\16.PrintLongSequence\obj\Debug\04.HelloWorld.pdb
+D:\todor\work\Telerik\C#\01 IntroToProgramming\16.PrintLongSequence\bin\Debug\04.HelloWorld.exe
+D:\todor\work\Telerik\C#\01 IntroToProgramming\16.PrintLongSequence\bin\Debug\04.HelloWorld.pdb
+D:\todor\work\Telerik\C#\01 IntroToProgramming\16.PrintLongSequence\obj\Debug\16.PrintLongSequence.csprojResolveAssemblyReference.cache

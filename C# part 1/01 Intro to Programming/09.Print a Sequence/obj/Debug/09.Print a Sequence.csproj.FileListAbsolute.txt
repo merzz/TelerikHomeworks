@@ -1,0 +1,6 @@
+D:\todor\work\Telerik\C#\01 IntroToProgramming\IntroToProgramming\9 Print a Sequence\bin\Debug\04.HelloWorld.exe.config
+D:\todor\work\Telerik\C#\01 IntroToProgramming\IntroToProgramming\9 Print a Sequence\obj\Debug\04.HelloWorld.exe
+D:\todor\work\Telerik\C#\01 IntroToProgramming\IntroToProgramming\9 Print a Sequence\obj\Debug\04.HelloWorld.pdb
+D:\todor\work\Telerik\C#\01 IntroToProgramming\09.Print a Sequence\bin\Debug\04.HelloWorld.exe.config
+D:\todor\work\Telerik\C#\01 IntroToProgramming\09.Print a Sequence\obj\Debug\04.HelloWorld.exe
+D:\todor\work\Telerik\C#\01 IntroToProgramming\09.Print a Sequence\obj\Debug\04.HelloWorld.pdb

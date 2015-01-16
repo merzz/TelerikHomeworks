@@ -1,0 +1,3 @@
+D:\todor\work\Telerik\C#\01 IntroToProgramming\06.Print Numbers\bin\Debug\04.HelloWorld.exe.config
+D:\todor\work\Telerik\C#\01 IntroToProgramming\06.Print Numbers\obj\Debug\04.HelloWorld.exe
+D:\todor\work\Telerik\C#\01 IntroToProgramming\06.Print Numbers\obj\Debug\04.HelloWorld.pdb
