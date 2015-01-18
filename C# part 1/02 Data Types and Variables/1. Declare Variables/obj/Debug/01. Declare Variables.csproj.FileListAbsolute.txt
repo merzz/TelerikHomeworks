@@ -1,0 +1,3 @@
+D:\todor\work\Telerik\homeworks\C# part 1\02 Data Types and Variables\1. Declare Variables\bin\Debug\04.HelloWorld.exe.config
+D:\todor\work\Telerik\homeworks\C# part 1\02 Data Types and Variables\1. Declare Variables\obj\Debug\04.HelloWorld.exe
+D:\todor\work\Telerik\homeworks\C# part 1\02 Data Types and Variables\1. Declare Variables\obj\Debug\04.HelloWorld.pdb

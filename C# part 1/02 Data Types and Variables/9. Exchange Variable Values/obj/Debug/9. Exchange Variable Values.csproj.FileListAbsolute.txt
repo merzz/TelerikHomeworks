@@ -1,0 +1,6 @@
+D:\todor\work\Telerik\homeworks\C# part 1\02 Data Types and Variables\9. Exchange Variable Values\bin\Debug\04.HelloWorld.exe.config
+D:\todor\work\Telerik\homeworks\C# part 1\02 Data Types and Variables\9. Exchange Variable Values\bin\Debug\04.HelloWorld.exe
+D:\todor\work\Telerik\homeworks\C# part 1\02 Data Types and Variables\9. Exchange Variable Values\bin\Debug\04.HelloWorld.pdb
+D:\todor\work\Telerik\homeworks\C# part 1\02 Data Types and Variables\9. Exchange Variable Values\obj\Debug\9. Exchange Variable Values.csprojResolveAssemblyReference.cache
+D:\todor\work\Telerik\homeworks\C# part 1\02 Data Types and Variables\9. Exchange Variable Values\obj\Debug\04.HelloWorld.exe
+D:\todor\work\Telerik\homeworks\C# part 1\02 Data Types and Variables\9. Exchange Variable Values\obj\Debug\04.HelloWorld.pdb
