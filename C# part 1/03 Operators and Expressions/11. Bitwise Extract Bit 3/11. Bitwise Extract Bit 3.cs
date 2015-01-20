@@ -9,7 +9,13 @@ class BitwiseExtractBit3
 {
     static void Main()
     {
+        Console.Write("Enter an integer (-2,147,483,648 to 2,147,483,647): ");
+        int num = int.Parse(Console.ReadLine());
 
+        num >>= 3;
+        num &= 1;
+
+        Console.WriteLine(num);
     }
 }
 

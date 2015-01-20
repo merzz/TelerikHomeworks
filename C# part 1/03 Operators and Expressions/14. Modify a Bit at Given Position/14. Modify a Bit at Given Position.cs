@@ -10,7 +10,15 @@ class ModifyBitGivenPosition
 {
     static void Main()
     {
+        Console.Write("Enter an integer (-2,147,483,648 to 2,147,483,647): ");
+        int num = int.Parse(Console.ReadLine());
+        Console.Write("Enter bit index (0 to 31): ");
+        byte bitIndex = byte.Parse(Console.ReadLine());
+        Console.Write("Enter bit value (0 to 31): ");
+        int bitValue = byte.Parse(Console.ReadLine());
 
+        num = (bitValue == 1) ? num | (1 << bitIndex) : num & ~(1 << bitIndex);
+        Console.WriteLine("Result: " + num);
     }
 }
 
