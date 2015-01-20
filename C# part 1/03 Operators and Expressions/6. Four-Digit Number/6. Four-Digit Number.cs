@@ -8,6 +8,11 @@
 //◦ Exchanges the second and the third digits:  acbd  (in our example  2101 ).
 
 //The number has always exactly 4 digits and cannot start with 0.
+//Examples:
+//n       sum of digits       reversed        last digit in front     second and third digits exchanged
+//2011    4                   1102            1201                    2101 
+//3333    12                  3333            3333                    3333 
+//9876    30                  6789            6987                    9786 
 
 class FourDigitNumber
 {
