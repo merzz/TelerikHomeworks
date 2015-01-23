@@ -15,10 +15,34 @@
 //10  6   210 
 //52  5   2598960 
 
-class Calculate 
+class Calculate
 {
     static void Main()
     {
+        Console.Write("Enter number n ( 1 to 100 ): ");
+        double n = double.Parse(Console.ReadLine());
+        Console.Write("Enter number k ( 1 to 100 ): ");
+        double k = double.Parse(Console.ReadLine());
 
+        double factn = 1;
+        double factk = 1;
+        double factkn = 1;
+
+        for (int i = 1; i <= n; i++)
+        {
+            factn *= i;
+
+            if (i <= k)
+            {
+                factk *= i;
+            }
+
+            if (i <= n - k)
+            {
+                factkn *= i;
+            }
+
+        }
+        Console.WriteLine(factn / (factk * factkn));
     }
 }

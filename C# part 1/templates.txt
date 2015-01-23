@@ -1,4 +1,4 @@
-Console.Write("Enter an integer (-2,147,483,648 to 2,147,483,647): ");
+Console.Write("Enter integer (-2,147,483,648 to 2,147,483,647): ");
 int num = int.Parse(Console.ReadLine());
 
 Console.Write("Enter number ( (+/-)5.0 x 10e-324 to (+/-)1.7 x 10e+308 ): ");

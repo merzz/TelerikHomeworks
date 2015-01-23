@@ -21,7 +21,18 @@ class Print_a_Deck_of_52_Cards
 {
     static void Main()
     {
-
+        for (int i = 2; i <= 10; i++)
+        {
+            Console.WriteLine("{0,2} of \u2660, {0,2} of \u2665, {0,2} of \u2666, {0,2} of \u2663", i);
+        }
+        string card = "J";
+        Console.WriteLine("{0,2} of \u2660, {0,2} of \u2665, {0,2} of \u2666, {0,2} of \u2663", card);
+        card = "Q";
+        Console.WriteLine("{0,2} of \u2660, {0,2} of \u2665, {0,2} of \u2666, {0,2} of \u2663", card);
+        card = "K";
+        Console.WriteLine("{0,2} of \u2660, {0,2} of \u2665, {0,2} of \u2666, {0,2} of \u2663", card);
+        card = "A";
+        Console.WriteLine("{0,2} of \u2660, {0,2} of \u2665, {0,2} of \u2666, {0,2} of \u2663", card);
     }
 }
 
