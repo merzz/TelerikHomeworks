@@ -15,6 +15,16 @@ class Matrix_of_Numbers
 {
     static void Main()
     {
+        Console.Write("Enter integer (0 to 20): ");
+        byte n = byte.Parse(Console.ReadLine());
 
+        for (byte i = 1; i <= n; i++)
+        {
+            for (byte j = i; j <= i+n-1; j++)
+            {
+                Console.Write(j + " ");
+            }
+            Console.WriteLine();
+        }
     }
 }
