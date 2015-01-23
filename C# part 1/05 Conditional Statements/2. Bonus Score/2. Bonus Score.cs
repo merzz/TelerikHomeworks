@@ -19,7 +19,16 @@ class Bonus_Score
 {
     static void Main()
     {
+        Console.Write("Enter score ( (+/-)5.0 x 10e-324 to (+/-)1.7 x 10e+308 ): ");
+        double num = double.Parse(Console.ReadLine());
 
+        if (num <= 3 && num >= 1) { num *= 10; }
+        else if (num >= 4 && num <= 6) { num *= 100; }
+        else if (num >= 7 && num <= 9) { num *= 1000; }
+
+        else { Console.WriteLine("invalid score"); return; }
+
+        Console.WriteLine(num);
     }
 }
 

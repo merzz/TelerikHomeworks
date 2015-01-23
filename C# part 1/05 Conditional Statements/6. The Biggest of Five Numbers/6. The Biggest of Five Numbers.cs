@@ -15,7 +15,24 @@ class The_Biggest_of_Five_Numbers
 {
     static void Main()
     {
+        Console.Write("Enter number 1 ( (+/-)5.0 x 10e-324 to (+/-)1.7 x 10e+308 ): ");
+        double num1 = double.Parse(Console.ReadLine());
+        Console.Write("Enter number 2 ( (+/-)5.0 x 10e-324 to (+/-)1.7 x 10e+308 ): ");
+        double num2 = double.Parse(Console.ReadLine());
+        Console.Write("Enter number 3 ( (+/-)5.0 x 10e-324 to (+/-)1.7 x 10e+308 ): ");
+        double num3 = double.Parse(Console.ReadLine());
+        Console.Write("Enter number 4 ( (+/-)5.0 x 10e-324 to (+/-)1.7 x 10e+308 ): ");
+        double num4 = double.Parse(Console.ReadLine());
+        Console.Write("Enter number 5 ( (+/-)5.0 x 10e-324 to (+/-)1.7 x 10e+308 ): ");
+        double num5 = double.Parse(Console.ReadLine());
 
+        double max = num1;
+        max = (num2 > max) ? num2 : max;
+        max = (num3 > max) ? num3 : max;
+        max = (num4 > max) ? num3 : max;
+        max = (num5 > max) ? num3 : max;
+
+        Console.WriteLine("Max: " + max);
     }
 }
 

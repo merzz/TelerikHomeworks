@@ -22,7 +22,7 @@
 //1 --> int  
 //2 --> double                    2 
 //3 --> string  
-  
+
 //Please enter a double:          1.5 
 //2.5 
 
@@ -30,7 +30,27 @@ class Play_with_Int_Double_and_String
 {
     static void Main()
     {
+        Console.Write("Please choose an input type:\n1-->int\n2-->double\n3-->string\nchoice: ");
+        byte input = byte.Parse(Console.ReadLine());
 
+        switch (input)
+        {
+            case 1:
+                Console.Write("Please enter an integer: ");
+                int input1 = int.Parse(Console.ReadLine());
+                Console.WriteLine(input1);
+                break;
+            case 2:
+                Console.Write("Please enter a floating point number: ");
+                double input2 = double.Parse(Console.ReadLine());
+                Console.WriteLine(input2);
+                break;
+            case 3:
+                Console.Write("Please enter a string: ");
+                string input3 = Console.ReadLine();
+                Console.WriteLine(input3);
+                break;
+        }
     }
 }
 

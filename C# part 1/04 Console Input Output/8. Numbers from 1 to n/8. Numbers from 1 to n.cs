@@ -16,7 +16,13 @@ class Numbers_From_1_to_n
 {
     static void Main()
     {
+        Console.Write("Enter an integer (0 to 4,294,967,294): ");
+        uint num = uint.Parse(Console.ReadLine());
 
+        for (uint i = 1; i < num+1; i++)
+        {
+            Console.WriteLine(i);
+        }
     }
 }
 

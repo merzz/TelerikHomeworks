@@ -13,7 +13,11 @@ class Circle_Perimeter_and_Area
 {
     static void Main()
     {
+        Console.Write("Enter radius ( (+/-)5.0 x 10e-324 to (+/-)1.7 x 10e+308 ): ");
+        double r = double.Parse(Console.ReadLine());
 
+        Console.WriteLine("Circle perimeter is {0:0.00}", (3.14159 * r * 2));
+        Console.WriteLine("Circle area is {0:0.00}", (3.14159 * r * r));
     }
 }
 

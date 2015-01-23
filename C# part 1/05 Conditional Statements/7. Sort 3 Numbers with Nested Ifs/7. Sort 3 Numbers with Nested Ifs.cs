@@ -17,7 +17,57 @@ class Sort_3_Numbers_with_Nested_Ifs
 {
     static void Main()
     {
+    start:
+        Console.Write("Enter number ( (+/-)5.0 x 10e-324 to (+/-)1.7 x 10e+308 ): ");
+        double num1 = double.Parse(Console.ReadLine());
+        Console.Write("Enter number ( (+/-)5.0 x 10e-324 to (+/-)1.7 x 10e+308 ): ");
+        double num2 = double.Parse(Console.ReadLine());
+        Console.Write("Enter number ( (+/-)5.0 x 10e-324 to (+/-)1.7 x 10e+308 ): ");
+        double num3 = double.Parse(Console.ReadLine());
 
+        //I could use similar algorithm like in 05.Biggest of 3 numbers with tree extra variables to solve it much quicker,
+        //but I decided to have a little more fun with nested ifs to see whether I could manage it.
+
+        if (num1 < num2)
+        {
+            if (num1 < num3)
+            {
+
+                if (num2 < num3)
+                {
+                    Console.WriteLine(num3 + " " + num2 + " " + num1);
+                }
+                else
+                {
+                    Console.WriteLine(num2 + " " + num3 + " " + num1);
+                }
+            }
+            else
+            {
+                Console.WriteLine(num2 + " " + num1 + " " + num3);
+            }
+
+        }
+
+        else
+        {
+            if (num1 > num3)
+            {
+                if (num3 > num2)
+                {
+                    Console.WriteLine(num1 + " " + num3 + " " + num2);
+                }
+                else
+                {
+                    Console.WriteLine(num1 + " " + num2 + " " + num3);
+                }
+            }
+            else
+            {
+                Console.WriteLine(num3 + " " + num1 + " " + num2);
+            }
+        }
+        goto start;
     }
 }
 

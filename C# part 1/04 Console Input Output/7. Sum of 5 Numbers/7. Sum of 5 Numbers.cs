@@ -14,7 +14,17 @@ class Sum_of_5_Numbers
 {
     static void Main()
     {
+        Console.Write("Enter 5 numbers, separated by space character: ");
+        string input = Console.ReadLine();
+        string[] numbers = input.Split(' ');
+        double sum = 0;
 
+        for (int i = 0; i < numbers.Length; i++)
+        {
+            sum += int.Parse(numbers[i]);
+        }
+
+        Console.WriteLine("Sum is: " + sum);
     }
 }
 

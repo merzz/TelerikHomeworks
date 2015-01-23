@@ -25,7 +25,17 @@ class Sum_of_n_Numbers
 {
     static void Main()
     {
+        Console.Write("Count of numbers to enter (0 to 4,294,967,295): ");
+        uint numCount = uint.Parse(Console.ReadLine());
+        double sum = 0;
 
+        for (int i = 0; i < numCount; i++)
+        {
+            Console.Write("Enter number {0} ( (+/-)5.0 x 10e-324 to (+/-)1.7 x 10e+308 ): ", i + 1);
+            sum += double.Parse(Console.ReadLine());
+        }
+
+        Console.WriteLine("Sum: " + sum);
     }
 }
 

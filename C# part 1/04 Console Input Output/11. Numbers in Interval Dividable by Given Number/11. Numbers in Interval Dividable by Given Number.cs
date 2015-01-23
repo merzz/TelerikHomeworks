@@ -17,7 +17,17 @@ class Numbers_in_Interval_Dividable_by_Given_Number
 {
     static void Main()
     {
+        Console.Write("Enter first integer (0 to 4,294,967,295): ");
+        uint num1 = uint.Parse(Console.ReadLine());
+        Console.Write("Enter second integer (0 to 4,294,967,295): ");
+        uint num2 = uint.Parse(Console.ReadLine());
+        int p = 0;
 
+        for (uint i = Math.Min(num1,num2); i <= Math.Max(num1,num2); i++)
+        {
+            p = (i % 5 == 0) ? p + 1 : p;    
+        }
+        Console.WriteLine("P= " + p);
     }
 }
 

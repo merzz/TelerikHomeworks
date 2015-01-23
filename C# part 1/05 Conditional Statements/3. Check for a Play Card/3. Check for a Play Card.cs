@@ -18,7 +18,26 @@ class Check_for_a_Play_Card
 {
     static void Main()
     {
+        Console.Write("Enter card: ");
+        string input = Console.ReadLine();
 
+        if (input == "j" || input == "J" || input == "q" || input == "Q" || input == "k" || input == "K" || input == "a" || input == "A")
+        {
+            Console.WriteLine("yes");
+            return;
+        }
+
+        for (int i = 2; i < 11; i++)
+        {
+            if (input == Convert.ToString(i))
+            {
+                Console.WriteLine("yes");
+                return;
+            }
+
+        }
+
+        Console.WriteLine("No");
     }
 }
 

@@ -21,7 +21,14 @@ class Formatting_Numbers
 {
     static void Main()
     {
+        Console.Write("Enter integer number a (-32768 to 32767): ");
+        short a = short.Parse(Console.ReadLine());
+        Console.Write("Enter floating-point number b ( (+/-)5.0 x 10e-324 to (+/-)1.7 x 10e+308 ): ");
+        double b = double.Parse(Console.ReadLine());
+        Console.Write("Enter floating-point number c ( (+/-)5.0 x 10e-324 to (+/-)1.7 x 10e+308 ): ");
+        double c = double.Parse(Console.ReadLine());
 
+        Console.WriteLine("{0,-10:X}|{3}|{1,10:0.00}|{2,10:0.000}", a, b, c, Convert.ToString(a, 2).PadLeft(10, '0'));
     }
 }
 

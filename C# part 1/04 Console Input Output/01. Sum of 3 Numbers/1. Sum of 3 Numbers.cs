@@ -12,7 +12,12 @@ class Sum_of_3_Numbers
 {
     static void Main()
     {
+        Console.Write("Enter three numbers ( (+/-)5.0 x 10e-324 to (+/-)1.7 x 10e+308 ): ");
+        double num = double.Parse(Console.ReadLine());
+        num += double.Parse(Console.ReadLine());
+        num += double.Parse(Console.ReadLine());
 
+        Console.WriteLine("sum is " + num);
     }
 }
 
