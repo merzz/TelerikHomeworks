@@ -4,6 +4,9 @@ byte num = byte.Parse(Console.ReadLine());
 Console.Write("Enter integer number (-32768 to 32767): ");
 short num = short.Parse(Console.ReadLine());
 
+Console.Write("Enter number: ");
+long num = long.Parse(Console.ReadLine());
+
 Console.Write("Enter integer (-2,147,483,648 to 2,147,483,647): ");
 int num = int.Parse(Console.ReadLine());
 

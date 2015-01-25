@@ -16,6 +16,7 @@ class Random_Numbers_in_Given_Range
 {
     static void Main()
     {
+    start:
         Console.Write("Enter integer n: ");
         int n = int.Parse(Console.ReadLine());
         Console.Write("Enter integer min: ");
@@ -25,20 +26,18 @@ class Random_Numbers_in_Given_Range
 
         for (int i = 1; i <= n; i++)
         {
-            for (int j = 1; j <= n + 1; j+=i)
+
+            if (n % (i + 1) == 0)
             {
-                if (min + n / j <= max && i%3 == 0)
-                {
-                    Console.Write(max - n / j + " ");
-                    break;
-                }
-                else if (min + n / j <= max)
-                {
-                    Console.Write(min + n/j + " ");
-                    break;
-                }
+                Console.Write(min + (max - min) / (n % (i + 1) + 1) + " ");
+            }
+            else
+            {
+                Console.Write(min + (max - min) / (n % (i + 1)) + " ");
             }
 
         }
+        Console.WriteLine();
+        goto start;
     }
 }

@@ -17,6 +17,27 @@ class Randomize_the_Numbers_1_N
 {
     static void Main()
     {
+        start:
+        Console.Write("Enter an integer (0 to 4,294,967,295): ");
+        uint n = uint.Parse(Console.ReadLine());
 
+        n = n % 10;
+
+        for (uint i = 1; i <= n; i++)
+        {
+            if ( n % (i+1) == 0)
+            {
+                Console.Write(i+" ");
+            }
+        }
+
+        for (int i = 1; i <= n; i++)
+        {
+            if ( n % (i+1) != 0)
+            {
+                Console.Write(i + " ");
+            }
+        }
+        goto start;
     }
 }
