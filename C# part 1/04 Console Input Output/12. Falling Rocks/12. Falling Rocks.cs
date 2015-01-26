@@ -17,41 +17,41 @@ class Falling_Rocks
         //I did this entirely on my own I haven`t read any similar problem solutions
         //so this is my original approach without any influences from examples
         //I have some computer graphics and animation background (not development) from user standpoint
-        //I`ll use a technic to render the console image called scanline rendering.
-        //I`ll assume my every frame resolution is the size of the console width and height
-        //then I`ll use a cycle to redraw every frame starting from the first line (topmost)
-        //I`ll control the framerate using Thread.Sleep() method
+        //I`ll use the console as image screen with a technic called scanline rendering.
+        //I`ll assume my every frame resolution is the size of the console width and height. Imagine one character as pixel.
+        //then I`ll use a cycle to redraw every frame (console screen) starting from the first line (topmost)
+        //I`ll control the framerate (refreshment of the console) using Thread.Sleep() method
         Console.SetBufferSize(80, 25);  
         //first we set the console "resolution"
-        //I keep it minimum height for faster redraw of the scanlines
+        //I keep it minimum height for faster redraw of the scanlines. 25 is the lowest possible
         string[] frameBuffer = new string[25];  //the total lines of the screen resolution are 25, we`ll use array with 25 strings
-        //with 80 characters in each string to draw the entire screen frame. You can think of this as a frame buffer
-        //When the new frame is generated we draw it on the screen using simple for cycle. This way we achieve faster and flicker framerate
+        //with 80 characters in each string to render the entire screen frame. You can think of this as a frame buffer
+        //When the new frame is generated we draw it on the screen using simple for cycle. This way we achieve faster and flicker-free framerate
         string currentLine = "";
         int move = 0;
         Random rInd = new Random(); //.NET functionality to generate random number
         int r = rInd.Next(1, 100);  //generate next random integer in range 1 to 100 and asign to r
 
-        for (int i = 0; i < 25; i++)    //define the starting frame with empty spaces
+        for (int i = 0; i < 25; i++)    //define the starting frame with empty spaces, blank console screen
         {
             frameBuffer[i] = new string(' ', 79);
         }
 
-    start:
+    start:  //this is the point from which the render engine begins
         do
         {
-            frameBuffer[24] = new string(' ', 36 + move) + "(0)" + new string(' ', 40 - move);     //define the last line of the frame with the rocket
+            frameBuffer[24] = new string(' ', 36 + move) + "(0)" + new string(' ', 40 - move);     //draws the last line of the frame with the rocket (0) in center
 
-            System.Threading.Thread.Sleep(200); //game speed control
+            System.Threading.Thread.Sleep(150); //game speed control
 
             Console.Clear();
             //the screen clear method helps with the problem when the buffer is not rendered completely to screen
-            //and a key is pressed to move the rocket, which starts the next rendering on top of the unfinished previous
-            //which ultimately leads to screen flickering
+            //and a key is pressed to move the rocket, which starts the next rendering on top of the unfinished previous.
+            //This ultimately leads to screen flickering.
 
-            for (int j = 0; j < 25; j++)    //screen redraw cycle immediately after clearing the screen
+            for (int j = 0; j < 25; j++)    //new frame render cycle immediately after clearing the screen
             {
-                Console.WriteLine(frameBuffer[j]);     //we keep it very simple for smooth live animation, just write 25 lines from the frame buffer array
+                Console.WriteLine(frameBuffer[j]);     //we keep it very simple for smooth live animation, just printing 25 lines from the frame buffer array
             }
 
             currentLine = frameBuffer[23];     //collision detection cycle. Will exit the entire program with a goto statement if collision
@@ -60,17 +60,17 @@ class Falling_Rocks
                 goto end;  //goes to the ending code block if collision is detected
             }
 
-            //next frame constructor redrawing the frame from the previous line, since we want the rocks to fall down
+            //next cycle is redrawing the next frame. Each line (except first and last) is copied from the previous line, since we want the rocks to fall down
             for (int i = 0; i < 23; i++)    
             {
-                frameBuffer[23 - i] = frameBuffer[23 - i - 1];
+                frameBuffer[23 - i] = frameBuffer[23 - i - 1];  //the new image is written to the frame buffer, one line per cycle
             }
 
             //Next we randomise the next frame`s first line.
             
             frameBuffer[0] = "";    //first clear the first frame line
 
-            for (int i = 0; i < 79; i += 1) //cycle to randomise the next frame buffer`s first line
+            for (int i = 0; i < 79; i += 1) //cycle to randomise the next frame`s first line
             {
                 if (r % 13 == 0 && r % 7 == 0)
                 {
@@ -82,7 +82,7 @@ class Falling_Rocks
                 }
                 r = rInd.Next(1, 100);
             }          
-            //with randomisation of the first line of every frame we get new patterns of falling rocks every time theres a new frame generated
+            //with randomisation of the first line of every frame we get new patterns of falling rocks every time there`s a new frame generated
             //in the frame buffer.
         }
         while (!Console.KeyAvailable);  //continue redrawing screen, generating new falling rocks and look for collison until a key is pressed
@@ -90,19 +90,21 @@ class Falling_Rocks
         if (Console.ReadKey().Key == ConsoleKey.LeftArrow)  // if left arrow key is detected
         {
             move -= (move > -36) ? 1 : 0;  //increment move, which will move the rocket 1 char to the left of starting position unless screen end is reached
-            goto start;   //return back to the screen redrawing algorithm
+            goto start;   //return back to the screen rendering algorithm and start rendering the new frame
         }
         else
         {
             move += (move < 40) ? 1 : 0;  //any other key is pressed moves the rocket 1 char to the right of starting position unless screen end is reached
+            //I didn`t use right arrow because the second Console.ReadKey().Key check stopped the program and waited for input, couldn`t solve this problem, but this works, too.
+            //I COULD USE SOME ADVICE HERE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
             goto start;
         }
 
     end:
-        Console.Write("                     BAAAAAAAAAAM!!!!!!!!");
+        Console.Write("{0,50}", "BAAAAAAAAAAM!!!!!!!!!!");
         Console.Read();
 
         //I presume that by using methods I can bypass the goto statements, but i`m still not familiar with methods,
-        //so please be merciful :)
+        //so please be merciful :). Even if goto is not good practice, there are some situations where it actually helps keep things more tidy and readable.
     }
 }
