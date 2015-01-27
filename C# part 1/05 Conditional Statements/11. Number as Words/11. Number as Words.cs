@@ -25,7 +25,7 @@ class Number_as_Words
     static void Main()
     {
         start:
-        Console.Write("Enter an integer (0 - 9): ");
+        Console.Write("Enter an integer (0 - 999): ");
         int num = int.Parse(Console.ReadLine());
         int hundreds = 0;
         int tens = 0;

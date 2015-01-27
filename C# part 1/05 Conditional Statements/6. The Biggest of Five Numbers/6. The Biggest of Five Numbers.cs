@@ -29,8 +29,8 @@ class The_Biggest_of_Five_Numbers
         double max = num1;
         max = (num2 > max) ? num2 : max;
         max = (num3 > max) ? num3 : max;
-        max = (num4 > max) ? num3 : max;
-        max = (num5 > max) ? num3 : max;
+        max = (num4 > max) ? num4 : max;
+        max = (num5 > max) ? num5 : max;
 
         Console.WriteLine("Max: " + max);
 
