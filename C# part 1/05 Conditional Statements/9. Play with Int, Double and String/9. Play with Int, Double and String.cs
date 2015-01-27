@@ -38,17 +38,17 @@ class Play_with_Int_Double_and_String
             case 1:
                 Console.Write("Please enter an integer: ");
                 int input1 = int.Parse(Console.ReadLine());
-                Console.WriteLine(input1);
+                Console.WriteLine(input1+1);
                 break;
             case 2:
                 Console.Write("Please enter a floating point number: ");
                 double input2 = double.Parse(Console.ReadLine());
-                Console.WriteLine(input2);
+                Console.WriteLine(input2+1);
                 break;
             case 3:
                 Console.Write("Please enter a string: ");
                 string input3 = Console.ReadLine();
-                Console.WriteLine(input3);
+                Console.WriteLine(input3 + new string('*',1));
                 break;
         }
     }

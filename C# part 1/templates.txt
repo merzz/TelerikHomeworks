@@ -22,4 +22,31 @@ double num = double.Parse(Console.ReadLine());
 Console.Write("");
 string input = Console.ReadLine();
 
+abcd	bacd
+abdc	badc
+acbd	bcab
+acdb	bcba
+adbc	bdac
+adcb	bdca
+
+abcde
+abced
+abdce
+abdec
+abecd
+abedc
+acbde
+acbed
+acdbe
+acdeb
+acebd
+acedb
+adbce
+adcbe
+adebc
+
+
+
+
+
 

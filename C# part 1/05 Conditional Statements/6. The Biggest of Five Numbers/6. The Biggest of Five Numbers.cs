@@ -33,6 +33,11 @@ class The_Biggest_of_Five_Numbers
         max = (num5 > max) ? num3 : max;
 
         Console.WriteLine("Max: " + max);
+
+        //to my mind this is the best algorithm, it doesn`t use extra variables and is very very simple.
+        //it works, as i wrote in the forum, because if the first number is bigger than the second, 
+        //and if the third is bigger than the first, the second cannot be bigger than the third. So there u go,
+        //the max variable will be sure to store the biggest of fives, after 4 sequential checks.
     }
 }
 

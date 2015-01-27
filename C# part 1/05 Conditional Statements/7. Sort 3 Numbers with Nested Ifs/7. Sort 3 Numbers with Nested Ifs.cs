@@ -25,7 +25,7 @@ class Sort_3_Numbers_with_Nested_Ifs
         Console.Write("Enter number ( (+/-)5.0 x 10e-324 to (+/-)1.7 x 10e+308 ): ");
         double num3 = double.Parse(Console.ReadLine());
 
-        //I could use similar algorithm like in 05.Biggest of 3 numbers with tree extra variables to solve it much quicker,
+        //I could use similar algorithm like in 06.Biggest of 5 numbers to solve it much quicker. It is probably the best,
         //but I decided to have a little more fun with nested ifs to see whether I could manage it.
 
         if (num1 < num2)

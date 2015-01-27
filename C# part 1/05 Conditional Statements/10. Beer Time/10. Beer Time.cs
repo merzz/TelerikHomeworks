@@ -22,7 +22,38 @@ class Beer_Time
 {
     static void Main()
     {
+        DateTime input;     //if we input just time, the date is automatically assigned to the current system`s
+        DateTime beerStart = DateTime.Parse("1:00 PM");
+        DateTime beerEnd = DateTime.Parse("3:00 AM");
 
+        start:
+        //cycle that will continously prompt the user to write his/her birth date until a valid input is received
+        do
+        {
+            Console.Write("\nEnter time (hh:mm tt):");
+        }
+
+        while (!DateTime.TryParse(Console.ReadLine(), out input));
+        //checks for valid date input and if true assigns to input
+
+        if (input >= beerStart)     //we cannot simultaneously check whether the entered time is bigger than start and smaller than end,
+            // because they are from the same day. And if bigger than start will always be bigger than end. We need to do the check separately
+            //with two different ifs.
+        {
+            Console.WriteLine("Beer time!");
+        }
+        else
+        {
+            if (input < beerEnd)
+            {
+                Console.WriteLine("Beer time!"); //second check whether the entered time falls within range
+            }
+            else
+            {
+                Console.WriteLine("Not a beer time :(.");   //if both checks fail it is not beer time.
+            }
+        }
+        goto start;
     }
 }
 
