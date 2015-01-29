@@ -47,12 +47,20 @@ class Trailing_Zeroes_in_Nfact
 
     static void Main()
     {
-        //of course theres a simpler method than brute force calculation
-        //if you divide the original number by 5, the first result is trailing zeros from all 5s (5^1),
-        //then divide again this result by 5, you get the zeros from all the 25s (5^2) and so on until you get zero result
-        //for example if you try to calculate !101. You need to find all the 5s in it. it is easy 101/5 = 20.
-        //So you have 20 trailing digits. But we missed 25s. They are powers of 5 which will also give trailing zeros.
-        //Just delete 101/25 = 4. 
+        //of course there`s a simpler method than brute force calculation
+        //every time the result is multiplied by 5 and 2 (10) it gets a trailing zero,
+        //we get 5 every five times, and we get 2 with every even number. So it is enough just to count all the times we get 5
+        //in the fatorial calculation. We get five every five numbers. 5, 10(2*5), 15(3*5), 20(4*5), 25(5*5)...
+        //we notice also that when we get a number that is a power of 5 we get more than one 5s in the factorial calculation.
+        //we also have to take these into account. But first, if we need to calculate the count of numbers that can be divided by 5 from 1 to n,
+        //all we need to do is divide n/5 and get the whole number. Next we will need to check for all the numbers that are the next power
+        //of 5 (2^2=25). This means to check how many times we get 25 in n. n/25 will give the count of all numbers that can be divided
+        //by 5 more than ones (two times). Since we already taken into account the first 5 multiplier, we only need to take into account the
+        //second 5 in our final count. And so on as long as the next power of 5 that we check for is smaller than n.
+        //From the above algorithm it is clear that if we first divide n/5. We get the count of the first power of 5. But we also can simply divide this result by five again,
+        //instead of dividing n by the next power of 5 (5*5). Since we already divided n by 5, we can divide this result to 5 again and this is the count of all 25 multipliers in the factorial.
+        //then the logic continues until the result is smaller than 5 because this will yield results smaller than 0. This means that this power of 5 we are checking is bigger than n so it is outside the range of facotrial multipliers.
+        
     start:
         Console.Write("Enter integer: ");
         ulong num = ulong.Parse(Console.ReadLine());
