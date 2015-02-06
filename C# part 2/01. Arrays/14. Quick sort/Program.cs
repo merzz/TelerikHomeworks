@@ -22,13 +22,18 @@ class Program
 
             for (int i = 0; i < arr.Length; i++)    //cycle to find first unsorted portion in array (marked with false)
             {
-                if (!isSorted[i]) { leftIdx++; isFinished = true; }   //set the flag isFinished to true when first time condition is met, leftIdx is just a counter for unsorted positions in this case
+                if (!isSorted[i]) { leftIdx++; isFinished = true; }   //set the flag isFinished to true when first time condition is met, 
+                //leftIdx is just a counter for unsorted positions in this case
 
-                if ((isSorted[i] && isFinished) || (i == isSorted.Length - 1 && isFinished))  //if element i is sorted or we reached the end and isFinsihed is true, then end cycle (we found our unsorted part)
+                if ((isSorted[i] && isFinished) || (i == isSorted.Length - 1 && isFinished))  //if element i is sorted or we reached the end 
+                    //and isFinsihed is true, then end cycle (we found our unsorted part)
                 {
                     isFinished = false;                     //reset the flag because we use it in the global while cycle also.
-                    leftIdx = (isSorted[i]) ? i - leftIdx : i - (leftIdx - 1);        //left start index is the current position minus all previous unsorted positions if current is sorted, else we have to exclude the current also. This is needed because of the case when we reached the end of the array
-                    rightIdx = (isSorted[i]) ? i - 1 : i;   //right end index was the previous position if current is sorted, else is the current.
+                    leftIdx = (isSorted[i]) ? i - leftIdx : i - (leftIdx - 1);        //left start index is the current position minus all 
+                    //previous unsorted positions if current is sorted, else we have to exclude the current also. This is needed because of 
+                    //the case when we reached the end of the array
+                    rightIdx = (isSorted[i]) ? i - 1 : i;   //right end index was the previous position if current is sorted, else is the 
+                    //current.
                     break;
                 }
 
@@ -40,7 +45,8 @@ class Program
             }
 
             if (isFinished) break; //if there are no more unsorted values exit global cycle
-            if (rightIdx == leftIdx) { isSorted[leftIdx] = true; continue; }    //if single element unsorted sequential part left it is marked as sorted
+            if (rightIdx == leftIdx) { isSorted[leftIdx] = true; continue; }    //if single element unsorted sequential part left it is marked
+            // as sorted
 
             pivotIdx = leftIdx + (rightIdx - leftIdx) / 2;  //pick pivot index in middle
             pivot = arr[pivotIdx];  //assign pivot value
@@ -59,8 +65,12 @@ class Program
                     arr[rightIdx] = arr[leftIdx] - arr[rightIdx];
                     arr[leftIdx] -= arr[rightIdx];
 
-                    if (leftIdx == pivotIdx) { pivotIdx = rightIdx; leftIdx++; }    //if left reached pivot index in preceeding while since we swap it with right, the new pivot position is the right index. Now we need to increment only leftIdx in case it is also equal to the pivot value (we have repeating elements). Because if we don`t do it we`ll get into an endless loop since the current right will continue swapping with pivot indefinitely and left and right index will never meet.
-                    else if (rightIdx == pivotIdx) { pivotIdx = leftIdx; rightIdx--; }  //if right reached pivot index in preceeding while since we swap it with left, the new pivot position is left index and we only need to increment right index
+                    if (leftIdx == pivotIdx) { pivotIdx = rightIdx; leftIdx++; }    //if left reached pivot index in preceeding while since we
+                        // swap it with right, the new pivot position is the right index. Now we need to increment only leftIdx in case it is
+                    //also equal to the pivot value (we have repeating elements). Because if we don`t do it we`ll get into an endless loop 
+                    //since the current right will continue swapping with pivot indefinitely and left and right index will never meet.
+                    else if (rightIdx == pivotIdx) { pivotIdx = leftIdx; rightIdx--; }  //if right reached pivot index in preceeding while 
+                    //since we swap it with left, the new pivot position is left index and we only need to increment right index
 
                 }
             }
