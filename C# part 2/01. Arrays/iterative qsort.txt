@@ -1,0 +1,88 @@
+/// Sort the array between a low and high bound in either ascending or descending order
+/// Parameters: 
+///      int  nFirst : between 0 and the upper bound of the array.
+///      int  nLast  : between 0 and the upper bound of the array.
+///                  : must be guaranteed >= nFirst.
+///      bool bAscend: true  - sort in ascending order
+///                  : false - sort in descending order
+        private bool ExecuteActualSort(int nFirst, int nLast, bool bAscend)
+        {
+            bool bSortOK = false;
+
+            try
+            {
+                int i, j, nStkPtr = 0, nTmp;
+                bool bSortCompleted = false, bDirection = true;
+
+                // get the maximum size of stack required:
+                int nStackMax = (int)((Math.Log(nLast) + 3) * 2); // from Knuth Vol 3.
+                // Note, +3 is added because: 
+                // +1 to round up rather than down, 
+                // +1 because it's a full bottom-up stack (ie Stack[0] is never used),
+                // +1 because data array is zero-indexed.
+
+                int[,] nStack = new int[nStackMax, 2];
+
+                do
+                {
+                    do
+                    {
+                        i = nFirst;
+                        j = nLast;
+                        bDirection = true;
+
+                        do
+                        {
+                            if ((nData[i] > nData[j]) == bAscend)
+                            {
+                                // Swap the two items in the list pointed to by i and j
+                                nTmp = nData[i];
+                                nData[i] = nData[j];
+                                nData[j] = nTmp;
+                                bDirection = !bDirection;
+                            }
+
+                            if (bDirection)
+                                j--;
+                            else
+                                i++;
+
+                        }
+                        while (i < j);
+
+                        if (i + 1 < nLast)
+                        {
+                            // There's another partition to be sorted
+                            nStkPtr++;
+                            nStack[nStkPtr, 0] = i + 1;
+                            nStack[nStkPtr, 1] = nLast;
+                        }
+                        nLast = i - 1;
+
+                    }
+                    while (nFirst < nLast);
+
+                    if (nStkPtr == 0)
+                    {
+                        // No more partitions to sort, so by definition we've finished!
+                        bSortCompleted = true;
+                    }
+
+                    else
+                    {
+                        // Pop the most recently stored partition and sort that
+                        nFirst = nStack[nStkPtr, 0];
+                        nLast = nStack[nStkPtr, 1];
+                        nStkPtr--;
+                    }
+                }
+
+                while (!bSortCompleted);
+
+                bSortOK = true;
+            }
+
+            catch { }
+
+            return bSortOK;
+        }
