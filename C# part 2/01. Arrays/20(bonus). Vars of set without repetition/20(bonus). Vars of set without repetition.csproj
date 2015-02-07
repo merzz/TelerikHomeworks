@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{EE2682A6-7A6F-4598-8BF8-680AFBFB23EA}</ProjectGuid>
+    <ProjectGuid>{39687478-AA08-456D-A393-A19B736E8FF0}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>_13.Merge_sort</RootNamespace>
+    <RootNamespace>_20_bonus_.Vars_of_set_without_repetition</RootNamespace>
     <AssemblyName>04.HelloWorld</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
