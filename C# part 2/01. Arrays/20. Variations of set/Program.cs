@@ -46,7 +46,7 @@ class Program
             for (int i = 0; i < k; i++)
             {
                 //if at least one is not max we stop the check and continue with next variation
-                if (digit[i] != 5) { finish = false; break; }
+                if (digit[i] != n) { finish = false; break; }
                 else finish = true;
             }
         }

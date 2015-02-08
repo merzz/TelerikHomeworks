@@ -1,15 +1,24 @@
 ﻿using System;
-//### Problem 20(bonus). Variations of set without Repetition
-//This task is not in the homeworks!!!!! It`s just a personal bonus.
-//*	Write a program that reads two numbers `N` and `K` and generates all the variations of `K` elements from the set [`1..N`].
+//### Problem 19.* Permutations of set
+//*	Write a program that reads a number `N` and generates and prints all the permutations of the numbers [`1 � N`].
+
+//_Example:_
+
+//| N |                                  result                                 |
+//|:-:|:-----------------------------------------------------------------------:|
+//| 3 | `{1, 2, 3}` <br> `{1, 3, 2}` <br> `{2, 1, 3}` <br> `{2, 3, 1}` <br> `{3, 1, 2}` <br> `{3, 2, 1}` |
 class Program
 {
     static void Main()
     {
+        //permutations are simply n variations of n numbers, but without repetition of the numbers
+        //so I will use the same algorithm as in Problem 20 with slight modification to exclude all
+        //the repeating members
+
         Console.Write("Enter N: ");
         int n = int.Parse(Console.ReadLine());
-        Console.Write("Enter K: ");
-        int k = int.Parse(Console.ReadLine());
+        //no need to enter k here, will make it equal to n
+        int k = n;
 
         //set a k digit array
         int[] digit = new int[k];
@@ -49,7 +58,7 @@ class Program
                 }
             }
 
-            //cycle to print digits if no any two digits or more are equal
+            //cycle to print digits if no two digits or more are equal
             if (noEqual)
             {
                 for (int i = 0; i < k; i++)
@@ -66,7 +75,6 @@ class Program
                 else finish = true;
             }
         }
-
     }
 }
 

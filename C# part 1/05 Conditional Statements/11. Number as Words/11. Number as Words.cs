@@ -199,11 +199,11 @@ class Number_as_Words
             }
             if (hundreds != 0)
             {
-                Console.Write("{0} hundred and ", hundredsString);
+                Console.Write("{0} hundred", hundredsString);
             }
             if (tens != 0)
             {
-                Console.Write("{0}", tensString);
+                Console.Write(" and {0}", tensString);
             }
             if (ones != 0)
             {
