@@ -45,6 +45,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "19. Permutations of set", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "18. Remove elements from array", "Problem 18. Remove elements from array\18. Remove elements from array.csproj", "{0B905A82-AC47-4E99-89DF-DDFF8548F46A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "16. Subset with sum S", "16. Subset with sum S\16. Subset with sum S.csproj", "{0357803C-A76C-41DF-817F-CC3B62687CFB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "17. Subset K with sum S", "17. Subset K with sum S\17. Subset K with sum S.csproj", "{77828ECB-1236-47BA-B2C7-D3395ED6C875}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -235,6 +239,26 @@ Global
 		{0B905A82-AC47-4E99-89DF-DDFF8548F46A}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{0B905A82-AC47-4E99-89DF-DDFF8548F46A}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{0B905A82-AC47-4E99-89DF-DDFF8548F46A}.Release|x86.ActiveCfg = Release|Any CPU
+		{0357803C-A76C-41DF-817F-CC3B62687CFB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0357803C-A76C-41DF-817F-CC3B62687CFB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0357803C-A76C-41DF-817F-CC3B62687CFB}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{0357803C-A76C-41DF-817F-CC3B62687CFB}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{0357803C-A76C-41DF-817F-CC3B62687CFB}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{0357803C-A76C-41DF-817F-CC3B62687CFB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0357803C-A76C-41DF-817F-CC3B62687CFB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0357803C-A76C-41DF-817F-CC3B62687CFB}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{0357803C-A76C-41DF-817F-CC3B62687CFB}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{0357803C-A76C-41DF-817F-CC3B62687CFB}.Release|x86.ActiveCfg = Release|Any CPU
+		{77828ECB-1236-47BA-B2C7-D3395ED6C875}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{77828ECB-1236-47BA-B2C7-D3395ED6C875}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{77828ECB-1236-47BA-B2C7-D3395ED6C875}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{77828ECB-1236-47BA-B2C7-D3395ED6C875}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{77828ECB-1236-47BA-B2C7-D3395ED6C875}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{77828ECB-1236-47BA-B2C7-D3395ED6C875}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{77828ECB-1236-47BA-B2C7-D3395ED6C875}.Release|Any CPU.Build.0 = Release|Any CPU
+		{77828ECB-1236-47BA-B2C7-D3395ED6C875}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{77828ECB-1236-47BA-B2C7-D3395ED6C875}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{77828ECB-1236-47BA-B2C7-D3395ED6C875}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

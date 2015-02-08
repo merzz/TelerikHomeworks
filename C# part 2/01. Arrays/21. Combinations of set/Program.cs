@@ -11,6 +11,7 @@ class Combinations
 {
     static void Main()
     {
+        //I will modify the algorithm from Problem 20 to get only the combinations from all the variations.
         Console.Write("Enter N: ");
         int n = int.Parse(Console.ReadLine());
         Console.Write("Enter K: ");
