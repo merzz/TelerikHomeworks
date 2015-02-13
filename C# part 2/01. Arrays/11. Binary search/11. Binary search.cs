@@ -12,7 +12,17 @@ class Program
         {
             arr[i] = int.Parse(arrStr[i]);
         }
-        Console.Write("Enter integer (-2,147,483,648 to 2,147,483,647): ");
+
+        Array.Sort(arr);
+
+        Console.WriteLine("Sorted array:");
+        foreach (var item in arr)
+        {
+            Console.Write(item + " ");
+        }
+        Console.WriteLine();
+
+        Console.Write("Enter integer to search for: ");
         int num = int.Parse(Console.ReadLine());
 
         int startIndx = 0, endIndx = arr.Length - 1;
@@ -26,6 +36,7 @@ class Program
             else if (arr[indx] < num) startIndx = indx;
 
         }
+
         Console.WriteLine("Not found!");
     }
 }

@@ -5,6 +5,7 @@ class Program
 {
     static void Main()
     {
+        // as it became clear in the forms we are supposed to sort integers not strings!!!!!!!!!!!!!!!!!!!!!!!
         Console.Write("Enter array (members delimited by space: ");
         string[] arrStr = Console.ReadLine().Split(' ');
         int[] arr = new int[arrStr.Length];

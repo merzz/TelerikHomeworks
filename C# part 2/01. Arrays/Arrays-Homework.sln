@@ -5,12 +5,6 @@ VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02. Compare arrays", "02. Compare arrays\02. Compare arrays.csproj", "{AB4EBF53-1646-4DC9-A444-A4D4198A38B0}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{4A938607-F7E3-4299-A15F-EAC6BA4284F9}"
-	ProjectSection(SolutionItems) = preProject
-		..\..\..\C#\templates\input.txt = ..\..\..\C#\templates\input.txt
-		ListsOperations.txt = ListsOperations.txt
-	EndProjectSection
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01. Allocate array", "01. Allocate array\01. Allocate array.csproj", "{2B31AA98-D21F-4931-AF0F-4BBEAF60A23F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03. Compare char arrays", "03. Compare char arrays\03. Compare char arrays.csproj", "{598B55DA-F724-4C60-B65C-71BCE396D65C}"

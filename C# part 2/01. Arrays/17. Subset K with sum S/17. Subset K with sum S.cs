@@ -21,7 +21,7 @@ class Program
 
         //     IMPORTANT      IMPORTANT      IMPORTANT      IMPORTANT      IMPORTANT      IMPORTANT      IMPORTANT
         
-        int[] arr = { 2, 1, 2, 4, 3, 5, 2, 6 };
+        int[] arr = { 2, 1, 2, 4, 3, 5, 2, 6 };     // YOUR INPUT HERE!!!!!!!!!!!!!!!!!
         int s = 14;
         int k = 4;
         int n = arr.Length;

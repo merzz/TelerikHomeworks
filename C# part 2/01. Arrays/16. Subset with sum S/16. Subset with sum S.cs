@@ -1,40 +1,37 @@
 ﻿using System;
-//### Problem 18.* Remove elements from array
-//*	Write a program that reads an array of integers and removes from it a minimal number of elements in such a way that the remaining array is sorted in increasing order.
-//*	Print the remaining sorted array.
+//### Problem 16. Subset with sum S
+//*	We are given an array of integers and a number `S`.
+//*	Write a program to find if there exists a subset of the elements of the array that has a sum `S`.
 
 //_Example:_
 
-//|           input           |     result    |
-//|:-------------------------:|:-------------:|
-//| 6, **1**, 4, **3**, 0, **3**, 6, **4**, **5** | 1, 3, 3, 4, 5 |
+//|       input array      | S  |     result    |
+//|:----------------------:|:--:|:-------------:|
+//| 2, **1**, **2**, 4, 3, **5**, 2, **6** | 14 | yes |
 class Program
 {
     static void Main()
     {
+        // THIS PROGRAM PRINTS ALL POSSIBLE COMBINATIONS OF ELEMENTS THAT HAS SUM S !!! not just the first met
         // I take out all possible combinations 
         //of k elements (1 to n) from all elements, using the algorithm in Problem 21.
-        //The algorithm there makes combinations without repetition of k numbers from 1 to N numbers
-        //I will use this combinations as indexes of a boolean array - mask.
-        //Then I check the initial array arr members using mask true values for the condition of sequential increase and pick the longest.
+        //The algorithm there makes combinations without repetition of k numbers from 1 to N possible numbers.
+        //Then I use this number combinations to generate combinations of array`s indexes.
+        //This results in finding all possible combinations of the array`s elements.
+        //Then each possible combo is checked for the condition.
 
         //IMPORTANT     IMPORTANT     IMPORTANT      IMPORTANT      IMPORTANT      IMPORTANT      IMPORTANT 
 
         //Since this is a brute force method the program may take very long time to calculate the result.
-        //Particularly to calculate the example it takes about 4-5 min on my AMD Athlon II Neo K325 1.3Ghz mobile processor
         //I consider the problem solved, since we have no time or memory limit. I know it is not the best, but it is
-        //the first I could think of with my limited time available. The program is fast with 7 or less members.
-        //Then the time increases exponentially.
+        //the first I could think of with my limited time available. With each additional member the time increases exponentially.
 
-        //     IMPORTANT      IMPORTANT      IMPORTANT      IMPORTANT      IMPORTANT      IMPORTANT      IMPORTANT 
+        //     IMPORTANT      IMPORTANT      IMPORTANT      IMPORTANT      IMPORTANT      IMPORTANT      IMPORTANT
 
-        //int[] arr = { 6, 1, 4, 3, 0, 3, 6, 4, 5 };
-        int[] arr = { 6, 1, 4, 3, 0, 3, 6 };
-        bool[] resultMask = new bool[arr.Length];
-
-
+        //all possible combinations of 2 to n numbers from n numbers are checked for the condition
+        int[] arr = { 2, 1, 2, 4, 3, 5, 2, 6};  // YOUR INPUT HERE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+        int s = 14;
         int n = arr.Length;
-        int maxCount = 0;
 
         for (int k = 2; k <= n; k++)
         {
@@ -64,7 +61,6 @@ class Program
                         //reset to 1 and move on to next previous
                         digit[i] = 1;
                     }
-
                     else break;
 
                 }
@@ -80,36 +76,29 @@ class Program
                 }
 
                 //THIS IS THE BEGINNING OF THE MODIFICATION!!!!!!!!!
-                //get the combo
+                //get only combinations from variations
                 if (allLeftSmaller)
                 {
                     for (int i = 0; i < k; i++)
-                        mask[digit[i] - 1] = true;
+                        mask[digit[i] - 1] = true;  //digit[i]-1 because we want indexes. n is from 1 to arr.Lenght!
 
-                    //next check for sequential increase
-                    int max = int.MinValue;
-                    int count = 0;
-                    bool isIncrease = true;
+                    //next check whether this combo equals sum S
+                    int sum = 0;
                     for (int i = 0; i < n; i++)
                     {
-                        if (mask[i])
-                        {
-                            count++;
-                            if (arr[i] >= max) { max = arr[i]; }
-                            else isIncrease = false;
-                        }
+                        if (mask[i]) sum += arr[i];
                     }
-                    //if we have sequential increase check if it is the longest so far
-                    if (isIncrease)
+                    //if current sum equals what we search for
+                    if (sum == s)
                     {
-                        if (count >= maxCount)
+                        //print the numbers
+                        for (int i = 0; i < n; i++)
                         {
-                            maxCount = count;
-                            resultMask = (bool[])mask.Clone();
+                            if (mask[i]) Console.Write(arr[i] + " ");
                         }
-
+                        Console.WriteLine();
                     }
-                    mask = new bool[arr.Length]; //reset mask for new combination
+                    mask = new bool[arr.Length]; //reset mask for next combination
 
                 }
                 //THIS IS THE END OF THE MODIFICATION!!!!!!!!!
@@ -124,13 +113,6 @@ class Program
             }
         }
 
-        for (int i = 0; i < n; i++)
-        {
-            if (resultMask[i])
-            {
-                Console.Write(arr[i] + " ");
-            }
-        }
     }
 }
 

@@ -26,6 +26,7 @@ class Program
         int sum = 0;
         for (int startIndx = 0; startIndx < arr.Length - 1; startIndx++)
         {
+            //int startPrintIdx = startIndx;
             for (int endIndx = startIndx; endIndx < arr.Length; endIndx++)
             {
                 sum += arr[endIndx];    //begin calculating the sum from the startIndx inclusive
@@ -36,9 +37,9 @@ class Program
                     {
                         Console.Write(arr[i] + " ");
                     }
-
+                    startIndx = endIndx;
                     Console.WriteLine();
-                    sum = 0;    //resetting the counter to start checking the next sequence sum
+                    sum = arr[startIndx];    //resetting the counter to start checking the next sequence sum including starting one
                 }
 
             }

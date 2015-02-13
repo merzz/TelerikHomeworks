@@ -37,9 +37,9 @@ class Program
             if (isFinished) break;  //if next prime not found exit loop
         }
 
-        for (int i = 2; i <= 100; i++)  //just print the first primes from 1-100
+        for (int i = 2; i <= 10000000; i++)  //printing to console takes time
         {
-            if (arr[i] != 0) Console.Write(arr[i] + " ");
+            if (arr[i] != 0) Console.WriteLine(arr[i]);
         }
     }
 }
