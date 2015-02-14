@@ -7,7 +7,7 @@ class LargestAreaInMatrix
 {
     static void Main()
     {
-        int r = 5;
+        int r = 5;  // YOUR INPUT HERE!!!!!!!!!!!!!!!!
         int c = 6;
         string[,] matrix = new string[5, 6]         // feel free to change matrix for tests but also change n and m if changing size
         {

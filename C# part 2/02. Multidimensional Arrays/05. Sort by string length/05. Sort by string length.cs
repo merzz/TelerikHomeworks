@@ -10,7 +10,7 @@ class SortByStringLength
         // WARNING! To better understand this code you can watch the last hour of Matrix and Multidim arrays
         // lecture by Niki from 2013/2014 C# Part 2 archive on TelerikAcademy`s website
 
-        // define your input here
+        // YOUR INPUT HERE!!!!!!!!!!!!!!!!
         string[] arrStr = 
         {
             "Asen", "Petko", "Mincho", "Martin", "Dancho", "Lyubo", "Lyudmil"

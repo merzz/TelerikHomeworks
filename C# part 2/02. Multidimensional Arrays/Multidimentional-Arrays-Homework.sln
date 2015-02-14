@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05. Sort by string length",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07. Largest area in matrix", "07. Largest area in matrix\07. Largest area in matrix.csproj", "{2C604730-B80F-4D13-999B-FCC8E985B8C4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06. Matrix class", "06. Matrix class\06. Matrix class.csproj", "{B3B974E1-D861-418C-95CF-91E4B2CF5B54}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{2C604730-B80F-4D13-999B-FCC8E985B8C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2C604730-B80F-4D13-999B-FCC8E985B8C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2C604730-B80F-4D13-999B-FCC8E985B8C4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B3B974E1-D861-418C-95CF-91E4B2CF5B54}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B3B974E1-D861-418C-95CF-91E4B2CF5B54}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B3B974E1-D861-418C-95CF-91E4B2CF5B54}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B3B974E1-D861-418C-95CF-91E4B2CF5B54}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

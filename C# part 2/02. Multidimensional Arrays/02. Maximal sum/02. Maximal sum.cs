@@ -7,7 +7,7 @@ class MaximalSumMatrix
 {
     static void Main()
     {
-        int n = 6;      // change these values for matrix N M size
+        int n = 6;      // YOUR INPUT HERE!!!!!!!!!!!!!!!!
         int m = 6;
 
         int[,] matrix = new int[n, m];

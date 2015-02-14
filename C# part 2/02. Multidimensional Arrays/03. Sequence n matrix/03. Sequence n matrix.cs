@@ -10,7 +10,7 @@ class SequenceNMatrix
     {
         ////int n = 3;
         ////int m = 4;
-        string[,] matrix = new string[3, 4]         // feel free to change matrix for tests
+        string[,] matrix = new string[3, 4]    // YOUR INPUT HERE!!!!!!!!!!!!!!!!
         {
          { "ha", "ho", "ho", "ho" },
          { "f", "ha", "d", "dsd" },

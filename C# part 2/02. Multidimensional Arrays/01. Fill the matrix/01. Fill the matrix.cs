@@ -5,7 +5,7 @@ class Program
 {
     static void Main()
     {
-        int n = 5;  //change this parameter to change matrix size
+        int n = 5;  // YOUR INPUT HERE!!!!!!!!!!!!!!!!
         int[,] matrix = new int[n, n];
         Random randomNumber = new Random();
 
