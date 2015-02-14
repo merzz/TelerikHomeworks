@@ -1,5 +1,6 @@
 ﻿using System;
-
+//### Problem* 06. Matrix class
+//*	Write a class `Matrix`, to hold a matrix of integers. Overload the operators for adding, subtracting and multiplying of matrices, indexer for accessing the matrix content and `ToString()`.
 class MatrixUI
 {
     static void Main()

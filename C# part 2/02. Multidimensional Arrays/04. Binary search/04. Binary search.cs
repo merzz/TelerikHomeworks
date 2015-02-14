@@ -18,11 +18,13 @@ class BinarySearch
 
         int result = -1;
 
-        // start checking from k until we find a match (returned index >= 0). 
+        // start checking from k until we find a match (returned index >= 0), or we reached minimum posssible value for int
         while (result < 0)
         {
             result = Array.BinarySearch(arr, k);
+            if (k == int.MinValue) break;
             k--;
+
         }
         
         Console.WriteLine("Number is {0}", arr[result]);
