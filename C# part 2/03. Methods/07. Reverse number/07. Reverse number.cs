@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 ////### Problem 07. Reverse number
 ////*	Write a method that reverses the digits of given decimal number.
 
@@ -12,14 +13,25 @@ class Program
     static void Main()
     {
         Console.Write("Enter number: ");
-        int num = int.Parse(Console.ReadLine());
+        decimal num = decimal.Parse(Console.ReadLine());
 
-        Console.WriteLine(ReverseDigits(num));
-    }
-
-    static int ReverseDigits(int num)
-    {
         char[] digits = num.ToString().ToCharArray();
+        int dotPosition = Array.IndexOf(digits, '.');
+
+        if (dotPosition > 0)
+        {
+            string[] parts = num.ToString().Split('.');
+            Console.WriteLine(ReverseString(parts[0]) + "." + ReverseString(parts[1]));
+        }
+        else
+        {
+        Console.WriteLine(ReverseString(num.ToString()));
+        }
+    }
+    
+    static string ReverseString(string thisString)
+    {
+        char[] digits = thisString.ToCharArray();
         Array.Reverse(digits);
         string res = "";
         for (int i = 0; i < digits.Length; i++)
@@ -27,7 +39,7 @@ class Program
             res += digits[i];
         }
 
-        return int.Parse(res);
+        return res;
     }
 }
 
